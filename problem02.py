@@ -1,3 +1,11 @@
+"""
+Euler Problem 2
+===============
+
+- created by tlee753
+- last modified 4.21.16
+"""
+
 num1 = 1
 num2 = 1
 array = [num1, num2] # initialize the array
