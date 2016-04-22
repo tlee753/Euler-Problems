@@ -6,6 +6,7 @@ Sum all numbers less than 1000 that are divisible by 3 or 5
 - created by tlee753
 - last modified 4.21.16
 """
+
 import time
 
 startTime = time.time()
