@@ -7,6 +7,9 @@ Find the greatest factor for a given number
 - last modified 4.5.16
 """
 
+import time
+
+startTime = time.time()
 n = 600851475143 # initialize the number in question
 i = 3 # initialize the smallest integer factor greater than 2
 
@@ -19,5 +22,5 @@ while (n != 1):
         n = n / i
     i += 2
 
-
 print ans
+print " --- %s seconds --- " % (time.time() - startTime)

@@ -6,6 +6,9 @@ Euler Problem 2
 - last modified 4.21.16
 """
 
+import time
+
+startTime = time.time()
 num1 = 1
 num2 = 1
 array = [num1, num2] # initialize the array
@@ -19,4 +22,6 @@ while (num2 < 4000000):
 for item in array:
     if (item % 2 == 0):
         total += item
+
 print total
+print " --- %s seconds --- " % (time.time() - startTime)

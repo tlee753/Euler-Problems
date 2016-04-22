@@ -3,11 +3,15 @@ Euler Problem 17
 ================
 Iterates through every number from one to one thousand, counting the number of letters
 
-- Created by tlee753
-- Last Modified 3/13/16
+- created by tlee753
+- last modified 3.13.16
 """
 
 import math
+import time
+
+startTime = time.time()
+# initialize timer
 
 count = 0
 # initialize letter counter
@@ -62,3 +66,4 @@ for i in range(1,1001):
         # hard code for 'one thousand'
 
 print count
+print " --- %s seconds --- " % (time.time() - startTime)

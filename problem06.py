@@ -16,5 +16,7 @@ for i in xrange(1, 101):
     sumTotal += i
     squaredTotal += i**2
 
-print "The difference between sumed squares and square of sum is %d" % (sumTotal**2 - squaredTotal)
+ans = sumTotal**2 - squaredTotal
+
+print ans
 print " --- %s seconds --- " % (time.time() - startTime) 

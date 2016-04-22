@@ -19,5 +19,5 @@ for i in xrange(999, 100, -1):
             if (x > ans):
                 ans = x
 
-print "The answer is %s" % ans
+print ans
 print "--- %s seconds --- " % (time.time() - startTime)
