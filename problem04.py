@@ -6,15 +6,18 @@ Euler Problem 4
 - last modified 4.5.16
 """
 
-i = 0
+import time
 
-while (i <= 999*999):
-    num = str(i)
-    size = len(num)
-    while (string[0] == string[size - 1] and size > 1)
-        string = string
-        size -= 2
-        ans = 
-    i += 1
+ans = 0
+startTime = time.time()
 
-print ans
+for i in xrange(999, 100, -1):
+    for j in xrange(i, 100, -1):
+        x = i * j
+        string = str(x)
+        if (string == string[::-1]):
+            if (x > ans):
+                ans = x
+
+print "The answer is %s" % ans
+print "--- %s seconds --- " % (time.time() - startTime)

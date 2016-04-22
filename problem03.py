@@ -4,7 +4,7 @@ Euler Problem 3
 Find the greatest factor for a given number
 
 - created by tlee753
-- last modified 4.4.16
+- last modified 4.5.16
 """
 
 n = 600851475143 # initialize the number in question
