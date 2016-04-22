@@ -31,8 +31,7 @@ while (True):
         primeCount += 1
         if (primeCount == 10001):
             ans = count
-            break
-    
+            break    
 
 print ans
 print " --- %s seconds --- " % (time.time() - startTime)
