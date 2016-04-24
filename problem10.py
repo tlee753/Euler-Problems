@@ -7,26 +7,18 @@ Euler Problem 10
 """
 
 import time
-from math import *
 
 startTime = time.time()
-ans = 0
+sieve = [True] * 2000000
 
-def isPrime(number):
-    if number <= 1:
-        return False
-    if number == 2:
-        return True
-    if number % 2 == 0:
-        return False
-    for i in range(3, int(sqrt(number)) + 1):
-        if number % i == 0:
-           return False
-    return True
-    
-for i in range(0, 2000000):
-    if isPrime(i):
-        ans += i
-        
+def multiplesCheck (sieve, x):
+    for i in xrange(x+x, len(sieve), x):
+        sieve[i] = False
+
+for x in xrange(2, int(len(sieve) ** 0.5) + 1):
+    if sieve[x]: multiplesCheck(sieve, x)
+
+ans = sum(i for i in xrange(2, len(sieve)) if sieve[i])
+
 print ans
 print " --- %s seconds --- " % (time.time() - startTime)
