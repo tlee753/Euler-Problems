@@ -3,40 +3,28 @@ Euler Problem 12
 ================
 
 - created by tlee753
-- last modified 12.1.17
+- last modified 5.31.18
 """
 
 import time
 
 startTime = time.time()
 
-solved = False
-myList = [0, 1]
-i = 2
+i = 1
+triangleNumber = 76576500
 
-while (not solved):
-    myList.append(i + myList[i - 1])
-    value = myList[i]
-
-    primeFactorizationCount = []
-    for j in range(2, value):
-        if (value % j == 0):
-            value /= j
-            count = 2
-            while (value % j == 0):
-                value /= j
-                count += 1
-            primeFactorizationCount.append(count)
-
-    product = 1
-    for j in range(len(primeFactorizationCount)):
-        product *= primeFactorizationCount[j]
-
-    if product >= 500:
-        solved = True
-        ans = myList[i]
+while (1):
+    divisorCount = 0
+    for j in range(1, int(triangleNumber/2) + 1):
+        if (triangleNumber % j) == 0:
+            divisorCount += 1
     
-    i += 1
+    if divisorCount > 500:
+        ans = triangleNumber
+        break
 
-print ans
-print " --- %s seconds --- " % (time.time() - startTime)
+    i += 1
+    triangleNumber += i
+
+print (ans)
+print (" --- %s seconds --- " % (time.time() - startTime))
