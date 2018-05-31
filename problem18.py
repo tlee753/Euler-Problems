@@ -7,6 +7,7 @@ Euler Problem 18
 """
 
 import time
+import operator
 
 startTime = time.time()
 
@@ -41,34 +42,16 @@ for h in range(1, len(pyramid)):
             maxPyramid[h][i] += max(maxPyramid[h-1][i-1], maxPyramid[h-1][i])
 
 
+index, value = max(enumerate(maxPyramid[h]), key=operator.itemgetter(1))
+varH = h - 1
 
-# dynamic programming, add values together running down the list based on max of parents (or parent for edge cases)
+while (varH > 0):
+    # pop indexes of maxes onto an array, then iterate backward through array getting values from pyramid as you go
+
 # once you've created a max pyramid, find the max at the bottom, work your way upward based on the maxes, gathering indexes as you go
 # using indexes to generate path to answer
 
-# h = 0
-# i = 0
-# path = []
-# path.append(pyramid[h][i])
-
-# while(h < len(pyramid) - 1):
-#     h += 1
-
-#     if (pyramid[h][i] > pyramid[h][i+1]):
-#         path.append(pyramid[h][i])
-#     else:
-#         path.append(pyramid[h][i+1])
-#         i += 1
-
-#     print(path)
-    
-#     for j in pyramid[h]:
-#         if (sum(path[0:h-abs(i-j)]) + j) > sum(path):
-#             print("hello world")
-#             # insert recursive a-star algo
-
-
-ans = maxPyramid
+ans = 5
     
 print(ans)
 print(" --- %s seconds --- " % (time.time() - startTime))
